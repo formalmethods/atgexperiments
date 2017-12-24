@@ -1,4 +1,8 @@
-def prettyPrintIndPairs(indpairs):
+"""
+Utilities for data presentation
+"""
+
+def pretty_print_ind_pair(indpairs):
     """
     Prints the given independence pair
     """

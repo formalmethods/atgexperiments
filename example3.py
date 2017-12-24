@@ -19,7 +19,7 @@ def doMain():
         print df
         print
         print 'Independence pairs for', decision
-        utils.prettyPrintIndPairs(dec2indpairs[decision])
+        utils.pretty_print_ind_pair(dec2indpairs[decision])
         print
 
 if __name__ == "__main__":

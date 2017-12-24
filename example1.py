@@ -11,7 +11,7 @@ def doMain():
     dec2df = mcdc.get_tables_as_dataframe(dec2tables)
     print dec2df['example1/O1']
     print
-    utils.prettyPrintIndPairs(dec2indpairs['example1/O1'])
+    utils.pretty_print_ind_pair(dec2indpairs['example1/O1'])
 
 if __name__ == "__main__":
     doMain()
