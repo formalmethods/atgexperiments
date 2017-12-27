@@ -1,0 +1,4 @@
+node top(a, b, c : bool) returns (d : bool);
+let
+	d = a and (b or c);
+tel
