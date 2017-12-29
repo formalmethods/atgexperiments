@@ -5,13 +5,13 @@ import intrepyd.atg.mcdc as mcdc
 
 def doMain():
     ctx = intrepyd.Context()
-    circ = it.translate_lustre('example4.lus', 'top', 'float32')
-    decisions = { 'd' : ['a', 'b', 'c'] }
-    dec2tables, dec2indpairs, _ = mcdc.compute_mcdc(ctx, circ.LustreCircuit, decisions, 0)
+    circ = it.translate_simulink('example4.slx', 'float')
+    decisions = { 'example4/O1' : ['example4/leq1', 'example4/leq2', 'C'] }
+    dec2tables, dec2indpairs, _ = mcdc.compute_mcdc(ctx, circ.SimulinkCircuit, decisions, 0)
     dec2df = mcdc.get_tables_as_dataframe(dec2tables)
-    print dec2df['d']
+    print dec2df['example4/O1']
     print
-    utils.pretty_print_ind_pair(dec2indpairs['d'])
+    utils.pretty_print_ind_pair(dec2indpairs['example4/O1'])
 
 if __name__ == "__main__":
     doMain()
